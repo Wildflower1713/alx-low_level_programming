@@ -21,8 +21,8 @@ while (h < 58)
 			i = 48;
 			while (i < 58)
 			{
-				opt1 = (h * 10) + g;
-				opt2 = (e * 10) + i;
+				op1 = (h * 10) + g;
+				op2 = (e * 10) + i;
 				if (op1 < op2)
 				{
 					putchar(h);
