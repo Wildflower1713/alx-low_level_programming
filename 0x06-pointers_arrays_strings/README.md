@@ -1,1 +1,1 @@
- This is a second readme file on pointersand array 
+More on Pointers, Arrays and Strings in C Programming
