@@ -1,51 +1,50 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 fibonacci numbers
+ * main - Prints the first 98 Fibonacci numbers
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
-	int a, b, c;
-	long int a1, a2, fn, fn2, n1, n2;
+	int c, boolean, boolean2;
+	long int n1, n2, fn, fn2, n11, n22;
 
-	a1 = 1;
-	a2 = 2;
-	b = c = 1;
-	printf("%ld, %ld", a1, a2);
-	for (a = 0; a < 96; a++)
+	n1 = 1;
+	n2 = 2;
+	boolean =  boolean2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 96; c++)
 	{
-		if (b)
+		if (boolean)
 		{
-			fn = a1 + a2;
+			fn = n1 + n2;
 			printf(", %ld", fn);
-			a1 = a2;
-			a2 = fn;
+			n1 = n2;
+			n2 = fn;
 		}
 		else
 		{
-			if (c)
+			if (boolean2)
 			{
-				n1 = a1 % 1000000000;
-				n2 = a2 % 1000000000;
-				a1 = a1 / 1000000000;
-				a2 = a2 / 1000000000;
-				c = 0;
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				boolean2 = 0;
 			}
-			fn2 = (n1 + n2);
-			fn = a1 + a2 + (fn2 / 1000000000);
+			fn2 = (n11 + n22);
+			fn = n1 + n2 + (fn2 / 1000000000);
 			printf(", %ld", fn);
 			printf("%ld", fn2 % 1000000000);
-			a1 = a2;
 			n1 = n2;
+			n11 = n22;
 			n2 = fn;
-			n2 = (fn2 % 1000000000);
+			n22 = (fn2 % 1000000000);
 		}
-		if (((a1 + a2) < 0) && b == 1)
-			b = 0;
+		if (((n1 + n2) < 0) && boolean == 1)
+			boolean = 0;
 	}
 	printf("\n");
 	return (0);
 }
-
