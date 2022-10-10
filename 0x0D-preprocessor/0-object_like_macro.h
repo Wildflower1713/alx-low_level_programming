@@ -1,15 +1,6 @@
-#include <stdio.h>
+#ifndef _OBJECT_LIKE_MACRO_
+#define _OBJECT_LIKE_MACRO_
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int s;
+#define SIZE 1024
 
-    s = 98 + SIZE;
-    printf("%d\n", s);
-    return (0);
-}
+#endif
